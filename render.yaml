@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: irrismart-mvp-demo
+    env: node
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /api/health
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start -w backend
